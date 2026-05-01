@@ -1769,7 +1769,8 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
 @media (max-width:960px) {
   /* モバイル時：本ヘッダーを縮める（112px → 72px） */
   #hdr { height: 72px; }
-  #hdr .logo img { height: 60px; }
+  #hdr .logo img { height: 40px; }
+  #hdr.scrolled .logo img { height: 40px; }
   #fix_hdr { height: 56px; }
   #fix_hdr .logo img { height: 48px; }
   /* ヒーロー：SP用調整（flex-column、ネイビーグラデ＋SVGカーブ前提） */
@@ -1868,6 +1869,13 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
   .support-num { font-size: 18px; }
   .support-sub { font-size: 14px; }
 }
+
+/* SP専用改行ヘルパー */
+.sp-only { display: none; }
+@media (max-width: 768px) {
+  .sp-only { display: inline; }
+}
+
 </style>
 
 <style>
@@ -2740,6 +2748,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
   color: var(--navy);
   letter-spacing: -.005em;
   min-height: 3.1em;
+  text-align: center;
 }
 .reason-card-text {
   font-size: 17px;
@@ -2994,7 +3003,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
       超<span class="hira-sm">える</span>
     </h1>
     <p class="hero-sub">
-      社長・エースの"勝ちパターン"を型化し、<br>
+      社長・エースの"勝ちパターン"を型化し<br>
       <span class="accent">10人中10人が売れる</span>組織へ
     </p>
     <div class="hero-cta-row">
@@ -3064,7 +3073,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
       <h2 class="sec-h2">3<span class="hira-sm">つの</span>問題<span class="hira-sm">の</span>根本<span class="hira-sm">は</span><br><span class="accent" style="color:var(--navy);">属人化</span><span class="hira-sm">です</span></h2>
       <p class="sec-lead" style="max-width:760px;margin:24px auto 0;">
         さきほどの3つの問題（型／仕組み／感情）<br>
-        これらはすべて、ひとつの根本原因——「属人化」に行き着きます
+        これらはすべて、ひとつの根本原因——<br class="sp-only">「属人化」に行き着きます
       </p>
     </div>
 
@@ -3133,8 +3142,8 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
   <div class="sucmof-inner">
     <div class="sucmof-sec-head rv" style="text-align:center;">
       <div class="eyebrow" style="justify-content:center;">よくある失敗</div>
-      <h2 class="sec-h2">9割<span class="hira-sm">の</span>経営者<span class="hira-sm">が</span><span class="accent" style="color:var(--navy);">"良<span class="hira-sm">かれ</span>"</span><span class="hira-sm">と思って</span>犯<span class="hira-sm">す</span>、<br><span class="hira-sm">よくある</span>間違<span class="hira-sm">い</span></h2>
-      <p class="sec-lead" style="max-width:760px;margin:24px auto 0;">属人化を超えようとして、多くの経営者が同じ打ち手に走るものの<br>そのいずれも、属人化をかえって"深める"結果に終わります</p>
+      <h2 class="sec-h2">9割<span class="hira-sm">の</span>経営者<span class="hira-sm">が</span><br><span class="accent" style="color:var(--navy);">"良<span class="hira-sm">かれ</span>"</span><span class="hira-sm">と思って</span>犯<span class="hira-sm">す</span><br><span class="hira-sm">よくある</span>間違<span class="hira-sm">い</span></h2>
+      <p class="sec-lead" style="max-width:760px;margin:24px auto 0;">属人化を超えようとして、多くの経営者が<br>同じ打ち手に走るものの<br>そのいずれも、属人化をかえって"深める"結果に終わります</p>
     </div>
 
     <div class="mistakes-grid">
@@ -3179,7 +3188,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
         <h2 class="solution-title">
           ノビシロ<span class="hira-sm">が</span>提供<span class="hira-sm">する</span>解決策<span class="hira-sm">は</span><br>
           エース<span class="hira-sm">の</span>勝<span class="hira-sm">ち</span>パターン<span class="hira-sm">を</span> <em>型化</em><br>
-          10人中10人<span class="hira-sm">が</span>売<span class="hira-sm">れる</span> <em>仕組み構築</em>
+          10人中10人<span class="hira-sm">が</span>売<span class="hira-sm">れる</span><br class="sp-only"> <em>仕組み構築</em>
         </h2>
       </div>
 
@@ -3219,8 +3228,8 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
       <div class="eyebrow" style="justify-content:center;">ご支援サービス</div>
       <h2 class="sec-h2">6ヶ月<span class="hira-sm">で</span><span class="accent">"自走組織"</span><span class="hira-sm">を</span>完成<span class="hira-sm">させる</span><br>4<span class="hira-sm">つの</span>ステップ</h2>
       <p class="sec-lead" style="max-width:760px;margin:24px auto 0;">
-        現在地の可視化 → 型化 → 現場の定着 → マネジメントの仕組み化まで<br>
-        御社固有の勝ちパターンを軸に、4つのステップで一貫支援
+        現在地の可視化 → 型化 → 現場の定着 →<br class="sp-only"> マネジメントの仕組み化まで<br>
+        御社固有の勝ちパターンを軸に、4つのステップで<br class="sp-only">一貫支援
       </p>
     </div>
 
@@ -3306,8 +3315,8 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
   <div class="sucmof-inner">
     <div class="achievements-head rv">
       <div class="eyebrow">プロジェクト事例</div>
-      <h2 class="sec-h2"><span class="accent">"売<span class="hira-sm">れる</span>組織"</span><span class="hira-sm">を</span>構築<span class="hira-sm">してきた</span>、<br>プロジェクト事例</h2>
-      <p class="sec-lead" style="max-width:760px;margin:24px auto 0;">業界・規模を問わず、属人化に向き合い、<br>"自走する売れる組織"を構築してきました</p>
+      <h2 class="sec-h2"><span class="accent">"売<span class="hira-sm">れる</span>組織"</span><span class="hira-sm">を</span>構築<span class="hira-sm">してきた</span><br>プロジェクト事例</h2>
+      <p class="sec-lead" style="max-width:760px;margin:24px auto 0;">業界・規模を問わず、属人化に向き合い<br>"自走する売れる組織"を構築してきました</p>
     </div>
     <div class="achievements-grid rv">
       <div class="ach-item">
@@ -3377,7 +3386,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
         <div class="reason-card-illust">
           <img src="illustrations/reason-1.svg" alt="泥臭く現場に入り型をつくるイメージ" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
         </div>
-        <h3 class="reason-card-title">泥臭く現場に入り、社長と一緒に<span class="accent">"型"</span>をつくる伴走力</h3>
+        <h3 class="reason-card-title">泥臭く現場に入り、社長と<br>一緒に<span class="accent">"型"</span>をつくる伴走力</h3>
         <p class="reason-card-text">
           社長やエースの頭の中の勝ちパターンを言語化するノウハウがあります。机上の空論ではなく、現場に入って二人三脚で型を作る、それがノビシロのスタイルです。
         </p>
@@ -3386,7 +3395,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
         <div class="reason-card-illust">
           <img src="illustrations/reason-2.svg" alt="一気通貫で伴走するイメージ" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
         </div>
-        <h3 class="reason-card-title">抽出から定着、<span class="accent">"自走組織"</span>完成まで一気通貫でやり切る力</h3>
+        <h3 class="reason-card-title">抽出から定着、<span class="accent">"自走組織"</span>完成<br>まで一気通貫でやり切る力</h3>
         <p class="reason-card-text">
           型を作って終わりではありません。社長が現場から解放される「第二創業」のステージまで、設計・実装・定着を一気通貫でやり切ります。
         </p>
@@ -3395,7 +3404,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
         <div class="reason-card-illust">
           <img src="illustrations/reason-3.svg" alt="数字で組織を変えてきた成果のイメージ" loading="lazy" onerror="this.style.display='none';this.parentElement.classList.add('placeholder')">
         </div>
-        <h3 class="reason-card-title">数々の営業組織を<span class="accent">"仕組み"</span>で変えてきた2名の実績</h3>
+        <h3 class="reason-card-title">数々の営業組織を<span class="accent">"仕組み"</span>で<br>変えてきた2名の実績</h3>
         <p class="reason-card-text">
           BtoB・BtoCを問わず、さまざまな営業組織で属人化突破の成果を積み重ねてきました。その原体験を、御社の「属人化からの脱却」に全力で注ぎます。
         </p>
@@ -3575,7 +3584,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
     <header class="cta-header rv">
       <div class="cta-eyebrow">無料診断</div>
       <h2 class="cta-title"><span class="cta-product-pill">営業組織<span class="cta-particle">の</span><span class="accent">ノビシロ</span>特定会議</span></h2>
-      <p class="cta-sub-lead">〜たった60分で、勝ちパターンの型化への道筋がわかる〜</p>
+      <p class="cta-sub-lead">〜たった60分で、勝ちパターンの<br class="sp-only">型化への道筋がわかる〜</p>
     </header>
 
     <div class="cta-grid">
@@ -3644,10 +3653,10 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
         <span class="cta-free-badge">期間限定</span>
       </div>
       <div class="cta-card-booking">
-        <div class="cta-card-title">無料診断セッション（60分）</div>
+        <div class="cta-card-title">無料診断セッション<br class="sp-only">（60分）</div>
         <div class="cta-card-meta">オンライン対応・契約義務なし</div>
         <a href="https://timerex.net/s/tomohiko.tsuchiya_eeed/83a9840f/" target="_blank" class="cta-btn">
-          無料の診断枠を確保する <span>→</span>
+          無料の診断枠を<br class="sp-only">確保する <span>→</span>
         </a>
         <div class="cta-notes">
           <div class="cta-note">※売り込みは一切いたしません。営業組織の健康診断としてお使いください</div>
@@ -3768,11 +3777,11 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
   <div class="sucmof-inner">
     <div class="contact-inner rv">
       <div class="eyebrow" style="justify-content:center;">お問い合わせ</div>
-      <h2 class="sec-h2 contact-h2">お気軽にお問い合わせください</h2>
+      <h2 class="sec-h2 contact-h2">お気軽に<br class="sp-only">お問い合わせください</h2>
       <p class="contact-lead">
         サービス内容・導入のご相談・お見積もりなど<br>
         どんな小さなご質問でも、お気軽にどうぞ<br>
-        <span class="contact-lead-note">通常 2〜3営業日以内に担当者よりご返信いたします（土日祝日を除く）</span>
+        <span class="contact-lead-note">通常 2〜3営業日以内に担当者よりご返信いたします<br class="sp-only">（土日祝日を除く）</span>
       </p>
       <div class="contact-cta-row">
         <a href="contact.html" class="contact-btn primary">
