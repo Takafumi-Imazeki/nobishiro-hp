@@ -1767,42 +1767,32 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
   #hdr .logo img { height: 60px; }
   #fix_hdr { height: 56px; }
   #fix_hdr .logo img { height: 48px; }
-  .hero { grid-template-columns:1fr; padding-top:0; min-height:auto; padding-left: 0; padding-right: 0; }
+  /* ヒーロー：SP用調整（flex-column、ネイビーグラデ＋SVGカーブ前提） */
+  .hero {
+    padding: 88px var(--pad-x) 48px;
+    min-height: auto;
+  }
   .hero-text {
-    order: 1;
-    position: relative; isolation: isolate;
-    padding: 120px var(--pad-x) 64px;
-    color: #fff;
+    padding: 32px 0;
+    max-width: 100%;
   }
-  .hero-text > * { position: relative; z-index: 2; }
-  .hero-text::before {
-    content: ''; position: absolute; inset: 0; z-index: 0;
-    background-image: url("hero.webp");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    filter: grayscale(100%) contrast(1.05);
+  .hero-h1 {
+    font-size: clamp(36px, 9vw, 56px);
+    line-height: 1.18;
+    margin-bottom: 28px;
   }
-  .hero-text::after {
-    content: ''; position: absolute; inset: 0; z-index: 1;
-    background: linear-gradient(180deg, rgba(17,17,17,.55), rgba(17,17,17,.7));
+  .hero-sub {
+    font-size: clamp(15px, 4vw, 17px);
+    line-height: 1.85;
+    margin-bottom: 32px;
+    max-width: 100%;
   }
   .hero-kicker {
-    color: #fff;
-    border-top-color: rgba(255,255,255,.4);
-    border-bottom-color: rgba(255,255,255,.4);
+    font-size: clamp(13px, 3.4vw, 15px);
+    padding: 14px 20px;
+    margin-bottom: 32px;
   }
-  .hero-kicker .accent { color: var(--orange); }
-  .hero-h1 { color: #fff; }
-  .hero-h1 .accent { color: #fff; }
-  .hero-sub { color: rgba(255,255,255,.92); }
-  .hero-photos {
-    order: 2;
-    height: 60vw; max-height: 500px;
-    margin: 40px var(--pad-x) 0;
-    width: auto; position: relative;
-  }
-  .scroll-hint { display: none; }
+  .hero-kicker .accent { font-size: 1.2em; }
   .sec-head-2col, .cta-grid, .footer-top { grid-template-columns:1fr; gap:36px; }
   .cta-card { padding: 36px 24px; }
   /* cta-card-pricing 旧モバイル指定は無効化 */
@@ -3659,7 +3649,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
     <!-- 土屋 -->
     <div class="founder-block rv">
       <div class="founder-photo">
-        <img src="tsuchiya.png" alt="土屋 朋彦 代表">
+        <img src="土屋_new.png" alt="土屋 朋彦 代表">
       </div>
       <div>
         <div class="founder-role-en">CEO</div>
@@ -3679,7 +3669,7 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
     <!-- 今関 -->
     <div class="founder-block rv">
       <div class="founder-photo">
-        <img src="imazeki.png" alt="今関 貴文 取締役">
+        <img src="今関.png" alt="今関 貴文 取締役">
       </div>
       <div>
         <div class="founder-role-en">COO</div>
