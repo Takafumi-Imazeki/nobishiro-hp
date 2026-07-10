@@ -118,10 +118,10 @@ footer { background: var(--navy); color: #fff; padding: clamp(60px, 6vw, 100px) 
 
 <header class="page-header">
   <div class="header-inner">
-    <a href="v_sucmof.html" class="header-logo">
+    <a href="index.html" class="header-logo">
       <img src="logo_navy.png" alt="ノビシロ">
     </a>
-    <a href="v_sucmof.html" class="header-back">← TOPへ戻る</a>
+    <a href="index.html" class="header-back">← TOPへ戻る</a>
   </div>
 </header>
 
@@ -180,20 +180,20 @@ footer { background: var(--navy); color: #fff; padding: clamp(60px, 6vw, 100px) 
         通常 <strong>2〜3営業日以内</strong> に担当者よりご返信いたします（土日祝日を除く）。<br>
         いましばらくお待ちください。
       </p>
-      <a href="v_sucmof.html" class="success-btn">TOPへ戻る <span>→</span></a>
+      <a href="index.html" class="success-btn">TOPへ戻る <span>→</span></a>
     </div>
   </div>
 </main>
 
 <footer>
   <div class="footer-top">
-    <a href="v_sucmof.html#top" class="footer-logo">
+    <a href="index.html#top" class="footer-logo">
       <img src="logo_white.png" alt="ノビシロ">
     </a>
     <nav class="footer-nav-flat">
-      <a href="v_sucmof.html#top">HOME</a>
-      <a href="v_sucmof.html#solution-cta">サービス</a>
-      <a href="v_sucmof.html#company-info">会社概要</a>
+      <a href="index.html#top">HOME</a>
+      <a href="index.html#solution-cta">サービス</a>
+      <a href="index.html#company-info">会社概要</a>
       <a href="contact.html">お問い合わせ</a>
       <a href="privacy.html">プライバシーポリシー</a>
       <a href="site-policy.html">サイトポリシー</a>
@@ -227,6 +227,7 @@ footer { background: var(--navy); color: #fff; padding: clamp(60px, 6vw, 100px) 
       });
 
       if (response.ok) {
+        if (typeof gtag === 'function') gtag('event', 'contact_submit');
         form.style.display = 'none';
         successMsg.style.display = 'block';
         window.scrollTo({ top: form.offsetTop - 80, behavior: 'smooth' });
