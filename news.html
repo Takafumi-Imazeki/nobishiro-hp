@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEWS｜株式会社ノビシロ</title>
+<meta name="description" content="株式会社ノビシロのお知らせ・掲載情報。メディア掲載、note記事、プレスリリースの一覧です。">
+
+<link rel="canonical" href="https://nobishiro-group.com/news.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="株式会社ノビシロ">
+<meta property="og:title" content="NEWS｜株式会社ノビシロ">
+<meta property="og:description" content="株式会社ノビシロのお知らせ・掲載情報。メディア掲載、note記事、プレスリリースの一覧です。">
+<meta property="og:url" content="https://nobishiro-group.com/news.html">
+<meta property="og:image" content="https://nobishiro-group.com/logo_navy.png">
+<meta property="og:locale" content="ja_JP">
+<meta name="robots" content="index,follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --black: #0A0A0A; --navy: #003399; --orange: #FF5722; --orange-h: #E64A1A;
+  --ink: var(--black); --ink-mid: #444; --ink-light: #888;
+  --bg: #FAF8F2; --offwhite: #F4F1EA; --rule: rgba(0,0,0,.12);
+  --pad-x: clamp(24px, 5vw, 80px); --max-w: 920px;
+  --font-ja: "Yu Gothic", "遊ゴシック体", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+  --font-en: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --ease: cubic-bezier(.2,.7,.3,1);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-ja); background: var(--bg); color: var(--ink); line-height: 1.75; -webkit-font-smoothing: antialiased; font-feature-settings: "palt"; }
+a { color: var(--ink); text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+.page-header { background: #fff; border-bottom: 1px solid var(--rule); padding: 20px var(--pad-x); position: sticky; top: 0; z-index: 100; }
+.header-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+.header-logo img { height: 56px; width: auto; }
+.header-back { font-size: 14px; color: var(--ink-mid); display: inline-flex; align-items: center; gap: 6px; transition: color .3s; }
+.header-back:hover { color: var(--navy); }
+
+main { padding: clamp(60px, 8vw, 120px) var(--pad-x) clamp(80px, 10vw, 140px); }
+.news-page-inner { max-width: var(--max-w); margin: 0 auto; }
+
+.eyebrow { font-family: var(--font-en); font-weight: 700; font-size: 14px; letter-spacing: .18em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 16px; display: inline-flex; align-items: center; gap: 12px; }
+.eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--ink-light); }
+h1 { font-family: var(--font-ja); font-weight: 900; font-size: clamp(28px, 4vw, 44px); line-height: 1.25; letter-spacing: -.02em; margin-bottom: 24px; }
+.lead { font-size: clamp(15px, 1.4vw, 17px); line-height: 1.95; color: var(--ink-mid); margin-bottom: clamp(48px, 6vw, 72px); }
+
+.news-list { border-top: 1px solid var(--rule); }
+.news-item { display: block; padding: 26px 6px; border-bottom: 1px solid var(--rule); transition: background .3s; }
+a.news-item:hover { background: rgba(0,51,153,.04); }
+a.news-item:hover .news-title { color: var(--navy); }
+.news-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+.news-date { font-family: var(--font-en); font-weight: 500; font-size: 13px; color: var(--ink-light); letter-spacing: .04em; }
+.news-cat { font-size: 11px; font-weight: 700; letter-spacing: .06em; color: var(--navy); border: 1px solid currentColor; padding: 1px 12px; border-radius: 999px; white-space: nowrap; }
+.news-cat.is-note { color: var(--orange-h); }
+.news-title { font-size: clamp(15px, 1.6vw, 17px); font-weight: 700; line-height: 1.6; transition: color .3s; display: inline-flex; align-items: baseline; gap: 8px; }
+.news-title .ext { font-family: var(--font-en); font-size: 12px; color: var(--ink-light); font-weight: 500; }
+.news-desc { font-size: 14px; color: var(--ink-mid); line-height: 1.85; margin-top: 6px; }
+
+footer { background: var(--navy); color: #fff; padding: clamp(60px, 6vw, 100px) var(--pad-x) 48px; margin-top: clamp(60px, 8vw, 100px); }
+.footer-top { max-width: var(--max-w); margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: 40px; padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,.18); }
+.footer-logo { line-height: 0; display: inline-block; transition: opacity .3s; }
+.footer-logo:hover { opacity: 0.8; }
+.footer-logo img { width: 260px; max-width: 100%; height: auto; display: block; }
+@media (max-width: 600px) { .footer-logo img { width: 200px; } }
+.footer-nav-flat { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 32px; font-size: 15px; }
+.footer-nav-flat a { color: rgba(255,255,255,.88); padding: 4px 0; transition: color .3s; }
+.footer-nav-flat a:hover { color: #fff; }
+@media (max-width: 768px) { .footer-nav-flat { gap: 4px 20px; font-size: 14px; } }
+.footer-bottom { max-width: var(--max-w); margin: 0 auto; padding-top: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; font-size: 15px; color: rgba(255,255,255,.55); letter-spacing: .04em; }
+@media (max-width: 600px) { .footer-bottom { flex-direction: column; text-align: center; gap: 8px; font-size: 13px; } }
+</style>
+<!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0R27R7TYYP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-0R27R7TYYP');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "xk3fb58yor");
+</script>
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+</head>
+<body>
+
+<header class="page-header">
+  <div class="header-inner">
+    <a href="index.html" class="header-logo">
+      <img src="logo_navy.png" alt="ノビシロ">
+    </a>
+    <a href="index.html" class="header-back">← トップへ戻る</a>
+  </div>
+</header>
+
+<main>
+  <div class="news-page-inner">
+    <div class="eyebrow">NEWS</div>
+    <h1>お知らせ・掲載情報</h1>
+    <p class="lead">
+      メディア掲載、note記事、プレスリリースなど、ノビシロの発信情報の一覧です。
+    </p>
+
+    <div class="news-list">
+
+      <!-- ▼▼ note記事公開時：下のテンプレートを複製して一番上に追加（新しい順に並べる） ▼▼
+      <a class="news-item" href="【note記事URL】?utm_source=hp&utm_medium=referral&utm_campaign=news" target="_blank" rel="noopener">
+        <div class="news-meta">
+          <span class="news-date">2026.07.XX</span>
+          <span class="news-cat is-note">note</span>
+        </div>
+        <div class="news-title">【記事タイトル】<span class="ext">note ↗</span></div>
+        <p class="news-desc">【1行要約】</p>
+      </a>
+      ▲▲ テンプレートここまで ▲▲ -->
+
+      <a class="news-item" href="https://keieisha-prime.com/interview/3046/" target="_blank" rel="noopener">
+        <div class="news-meta">
+          <span class="news-date">2026.06.20</span>
+          <span class="news-cat">メディア掲載</span>
+        </div>
+        <div class="news-title">経営者インタビュー「社長のロマンを実現する、ノビシロ」が掲載されました<span class="ext">経営者PRIME ↗</span></div>
+        <p class="news-desc">代表の土屋が、創業の背景と「10人中10人が売れる営業組織」づくりへの想いを語ったインタビュー記事です。</p>
+      </a>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="footer-top">
+    <a href="index.html#top" class="footer-logo">
+      <img src="logo_white.png" alt="ノビシロ">
+    </a>
+    <nav class="footer-nav-flat">
+      <a href="index.html#top">トップ</a>
+      <a href="index.html#solution-cta">サービス</a>
+      <a href="index.html#company-info">会社概要</a>
+      <a href="news.html">お知らせ</a>
+      <a href="contact.html">お問い合わせ</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="site-policy.html">サイトポリシー</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2025-2026 Nobishiro Inc.</span>
+    <span>All rights reserved.</span>
+  </div>
+</footer>
+
+</body>
+</html>

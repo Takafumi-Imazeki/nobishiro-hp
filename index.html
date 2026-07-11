@@ -2976,6 +2976,23 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
   .company-info-table th, .company-info-table td { display: block; width: 100%; padding: 12px 0; }
   .company-info-table th { border-bottom: none; padding-bottom: 4px; }
 }
+
+/* === NEWS（お知らせ・掲載情報） === */
+.news-list { max-width: 880px; margin: 0 auto; border-top: 1px solid var(--rule); }
+.news-item { display: block; padding: 26px 6px; border-bottom: 1px solid var(--rule); transition: background .3s; }
+a.news-item:hover { background: rgba(0,51,153,.04); }
+a.news-item:hover .news-title { color: var(--navy); }
+.news-meta { display: flex; align-items: center; gap: 14px; margin-bottom: 8px; }
+.news-date { font-family: var(--font-en); font-weight: 500; font-size: 13px; color: var(--ink-light); letter-spacing: .04em; }
+.news-cat { font-size: 11px; font-weight: 700; letter-spacing: .06em; color: var(--navy); border: 1px solid currentColor; padding: 1px 12px; border-radius: 999px; white-space: nowrap; }
+.news-cat.is-note { color: var(--orange-h, #E64A1A); }
+.news-title { font-size: clamp(15px, 1.6vw, 17px); font-weight: 700; line-height: 1.6; transition: color .3s; display: inline-flex; align-items: baseline; gap: 8px; }
+.news-title .ext { font-family: var(--font-en); font-size: 12px; color: var(--ink-light); font-weight: 500; }
+.news-desc { font-size: 14px; color: var(--ink-mid); line-height: 1.85; margin-top: 6px; }
+.news-more { max-width: 880px; margin: 32px auto 0; text-align: right; }
+.news-more a { font-size: 15px; font-weight: 700; color: var(--navy); display: inline-flex; align-items: center; gap: 8px; transition: opacity .3s; }
+.news-more a:hover { opacity: .7; }
+.news-more svg { width: 22px; height: 19px; }
 </style>
 
 <!-- Google tag (gtag.js) - GA4 -->
@@ -2985,6 +3002,15 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'G-0R27R7TYYP');
+</script>
+
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+(function(c,l,a,r,i,t,y){
+c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+})(window, document, "clarity", "script", "xk3fb58yor");
 </script>
 
 <!-- Favicon -->
@@ -3006,9 +3032,9 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
     <span class="logo-text">ノビシロ</span>
   </a>
   <nav class="nav">
-    <a href="#top" class="nav-a">HOME</a>
     <a href="#solution-cta" class="nav-a">サービス</a>
     <a href="#company-info" class="nav-a">会社概要</a>
+    <a href="#news" class="nav-a">お知らせ</a>
     <div class="nav-cta-group">
       <a href="#cta" class="nav-cta">無料診断を予約 <span>→</span></a>
       <a href="contact.html" class="nav-cta-2">お問い合わせ <span>→</span></a>
@@ -3028,9 +3054,9 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
     <span class="logo-text">ノビシロ</span>
   </a>
   <nav class="nav">
-    <a href="#top" class="nav-a">HOME</a>
     <a href="#solution-cta" class="nav-a">サービス</a>
     <a href="#company-info" class="nav-a">会社概要</a>
+    <a href="#news" class="nav-a">お知らせ</a>
     <div class="nav-cta-group">
       <a href="#cta" class="nav-cta">無料診断を予約 <span>→</span></a>
       <a href="contact.html" class="nav-cta-2">お問い合わせ <span>→</span></a>
@@ -3047,9 +3073,10 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
     <span></span><span></span>
   </button>
   <nav class="mobile-nav">
-    <a href="#top" class="mobile-nav-a">HOME</a>
+    <a href="#top" class="mobile-nav-a">トップ</a>
     <a href="#solution-cta" class="mobile-nav-a">サービス</a>
     <a href="#company-info" class="mobile-nav-a">会社概要</a>
+    <a href="#news" class="mobile-nav-a">お知らせ</a>
     <a href="contact.html" class="mobile-nav-a">お問い合わせ</a>
     
     <a href="#cta" class="mobile-nav-cta">無料診断 →</a>
@@ -3823,6 +3850,47 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
 </section>
 
 <!-- ====================================================
+     10.5 NEWS（お知らせ・掲載情報）
+==================================================== -->
+<section class="news-sec sucmof-sec" id="news">
+  <div class="sucmof-inner">
+    <div class="sucmof-sec-head rv" style="text-align:center;">
+      <span class="eyebrow" style="justify-content:center;">NEWS</span>
+      <h2 class="sec-h2">お知らせ・掲載情報</h2>
+    </div>
+    <div class="news-list rv">
+
+      <!-- ▼▼ note記事公開時：下のテンプレートを複製して一番上に追加（最新3件のみ掲載、古いものは削除しnews.htmlへ） ▼▼
+      <a class="news-item" href="【note記事URL】?utm_source=hp&utm_medium=referral&utm_campaign=news" target="_blank" rel="noopener">
+        <div class="news-meta">
+          <span class="news-date">2026.07.XX</span>
+          <span class="news-cat is-note">note</span>
+        </div>
+        <div class="news-title">【記事タイトル】<span class="ext">note ↗</span></div>
+      </a>
+      ▲▲ テンプレートここまで ▲▲ -->
+
+      <a class="news-item" href="https://keieisha-prime.com/interview/3046/" target="_blank" rel="noopener">
+        <div class="news-meta">
+          <span class="news-date">2026.06.20</span>
+          <span class="news-cat">メディア掲載</span>
+        </div>
+        <div class="news-title">経営者インタビュー「社長のロマンを実現する、ノビシロ」が掲載されました<span class="ext">経営者PRIME ↗</span></div>
+      </a>
+
+    </div>
+    <div class="news-more rv">
+      <a href="news.html">一覧を見る
+        <svg viewBox="0 0 28 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="24" y2="12"/>
+          <polyline points="18,6 24,12 18,18"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
      11. 会社概要
 ==================================================== -->
 <section class="company-info sucmof-sec" id="company-info">
@@ -3907,9 +3975,10 @@ footer { background: var(--navy); color:#fff; padding: clamp(60px,6vw,100px) var
       <img src="logo_white.png" alt="ノビシロ">
     </a>
     <nav class="footer-nav-flat">
-      <a href="#top" class="fn-a">HOME</a>
+      <a href="#top" class="fn-a">トップ</a>
       <a href="#solution-cta" class="fn-a">サービス</a>
       <a href="#company-info" class="fn-a">会社概要</a>
+      <a href="news.html" class="fn-a">お知らせ</a>
       <a href="contact.html" class="fn-a">お問い合わせ</a>
       <a href="privacy.html" class="fn-a">プライバシーポリシー</a>
       <a href="site-policy.html" class="fn-a">サイトポリシー</a>
