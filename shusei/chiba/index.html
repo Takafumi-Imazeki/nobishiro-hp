@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>会員獲得の6つの型（守成クラブ千葉会場）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1C4792;
+    --navy-dark: #102A52;
+    --orange: #F37031;
+    --ink: #231F20;
+    --paleblue: #D4E7F7;
+    --gray: #6b7280;
+    --line: #e5e7eb;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    line-height: 1.9;
+    font-size: 16px;
+    background: #fff;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 24px; }
+  p { text-wrap: pretty; }
+  h1, h2, .principle { text-wrap: balance; }
+
+  /* 写真プレースホルダー */
+  .ph { background: #eef1f5; border: 1px solid var(--line); display: flex; align-items: center; justify-content: center; color: var(--gray); font-size: 13px; font-weight: 500; }
+  .ph-photo { aspect-ratio: 16 / 9; width: 100%; }
+  .ph-avatar { width: 64px; height: 64px; border-radius: 50%; flex-shrink: 0; font-size: 11px; text-align: center; line-height: 1.4; }
+
+  /* 実写真 */
+  .keikai-photo img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 42%; }
+  .ph-avatar.photo { border: none; background-repeat: no-repeat; font-size: 0; text-indent: -9999px; }
+
+  /* ヒーロー */
+  .hero { background: var(--navy); color: #fff; padding: clamp(64px, 11vw, 120px) 0 clamp(64px, 10vw, 110px); position: relative; overflow: hidden; }
+  .hero::after { content: "型"; position: absolute; right: 14px; bottom: 10px; font-size: clamp(230px, 42vw, 480px); font-weight: 900; line-height: 1; color: rgba(255,255,255,.055); pointer-events: none; }
+  .hero .wrap { position: relative; z-index: 1; }
+  .hero .label { font-size: 13px; letter-spacing: .16em; opacity: .85; font-weight: 700; margin-bottom: 26px; }
+  .hero h1 { font-size: clamp(30px, 7.4vw, 58px); font-weight: 900; line-height: 1.35; letter-spacing: -.01em; margin-bottom: 28px; }
+  .hero h1 .em { color: var(--orange); }
+  .hero .lead { font-size: clamp(15px, 3.6vw, 18px); font-weight: 400; opacity: .96; margin-bottom: 12px; max-width: 36em; }
+  .hero .lead strong { font-weight: 700; }
+  .hero .lead .hl { color: var(--orange); font-weight: 700; }
+  .hero .credit { margin-top: 36px; font-size: 13px; opacity: .8; }
+
+  /* 例会風景写真 */
+  .keikai-photo { margin-top: -1px; }
+
+  /* 監修コメント */
+  .kanshu { background: var(--paleblue); padding: 28px 0; }
+  .kanshu .inner { display: flex; gap: 18px; align-items: flex-start; }
+  .kanshu .body { flex: 1; }
+  .kanshu .who { display: inline-block; background: var(--navy); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .08em; padding: 3px 12px; margin-bottom: 10px; }
+  .kanshu p { font-size: 15px; }
+  .draft-note { font-size: 12px; color: var(--gray); margin-top: 6px; }
+
+  /* 目次＝全体図 */
+  .toc { padding: 44px 0 8px; }
+  .toc h2 { font-size: 14px; letter-spacing: .12em; color: var(--gray); font-weight: 700; margin-bottom: 6px; }
+  .toc .toc-hint { font-size: 12.5px; color: var(--gray); margin-bottom: 14px; }
+  .toc ol { list-style: none; }
+  .toc li { border-bottom: 1px solid var(--line); }
+  .toc a { display: flex; align-items: center; gap: 14px; padding: 14px 4px; text-decoration: none; color: var(--ink); }
+  .toc a:active { background: #f8fafc; }
+  .toc .no { font-weight: 900; color: var(--navy); font-size: 13px; min-width: 3.4em; flex-shrink: 0; }
+  .toc .t { flex: 1; }
+  .toc .t b { display: block; font-weight: 700; font-size: 15px; line-height: 1.5; }
+  .toc .t small { display: block; font-size: 12.5px; color: var(--gray); line-height: 1.5; }
+  .toc .arw { color: var(--navy); font-weight: 700; flex-shrink: 0; }
+
+  /* セクション共通 */
+  section.block { padding: clamp(48px, 9vw, 80px) 0 0; }
+  .principle { font-size: clamp(18px, 4.2vw, 21px); font-weight: 900; line-height: 1.65; color: var(--navy); margin: 18px 0 26px; }
+
+  /* 大前提 */
+  .zentei h2 { font-size: clamp(20px, 5vw, 26px); font-weight: 900; color: var(--ink); }
+  .zentei .tag { display: inline-block; background: var(--navy); color: #fff; font-size: 13px; font-weight: 700; letter-spacing: .1em; padding: 4px 14px; margin-bottom: 14px; }
+  .zentei p { margin-bottom: 16px; }
+  .zentei .do { background: var(--paleblue); padding: 20px 22px; font-weight: 700; font-size: 15px; margin: 22px 0; }
+
+  /* チャプター帯（右肩上がりの斜めカット） */
+  .chapter { background: var(--navy); color: #fff; margin-top: clamp(56px, 10vw, 88px); padding: 30px 0 42px; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), 0 100%); }
+  .chapter .ch-label { font-size: 12px; letter-spacing: .18em; opacity: .75; font-weight: 700; }
+  .chapter h2 { font-size: clamp(19px, 4.6vw, 25px); font-weight: 900; margin-top: 4px; }
+  .chapter p { font-size: 14px; opacity: .92; margin-top: 8px; }
+
+  /* STEP */
+  .step-head { display: flex; align-items: flex-end; gap: 16px; border-bottom: 2px solid var(--navy); padding-bottom: 10px; }
+  .step-no { font-weight: 900; font-size: clamp(52px, 12vw, 76px); line-height: .9; color: var(--navy); letter-spacing: -.02em; }
+  .step-title { font-size: clamp(20px, 5vw, 26px); font-weight: 900; padding-bottom: 6px; }
+  .step-title small { display: block; font-size: 12px; font-weight: 700; color: var(--gray); letter-spacing: .1em; margin-bottom: 2px; }
+
+  .sub-label { display: inline-block; background: var(--navy); color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .12em; padding: 3px 14px; margin: 30px 0 10px; }
+
+  /* トーク */
+  .talk { background: #f8fafc; padding: 20px 22px; }
+  .talk p { font-size: 15.5px; font-weight: 500; margin-bottom: 12px; }
+  .talk p:last-child { margin-bottom: 0; }
+  .talk p.q { text-indent: -0.5em; }
+  @supports (hanging-punctuation: first) {
+    .talk p.q { text-indent: 0; hanging-punctuation: first; }
+  }
+  .talk .note { font-size: 13px; color: var(--gray); font-weight: 400; }
+  .talk .scene { font-size: 12.5px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+  .talk p.scene { margin-bottom: 2px; }
+  .talk p.scene + p { margin-top: 0; }
+
+  /* ヒント枠（STEP1のみ） */
+  .hint { border: 1px solid var(--line); padding: 14px 18px; font-size: 14px; margin-top: 14px; }
+  .hint b { color: var(--navy); }
+
+  /* NG */
+  .ng { background: var(--navy-dark); color: #fff; padding: 16px 20px; margin-top: 14px; display: flex; gap: 14px; align-items: baseline; }
+  .ng .ng-label { color: var(--orange); font-weight: 900; font-size: 15px; letter-spacing: .08em; flex-shrink: 0; }
+  .ng p { font-size: 14.5px; font-weight: 500; }
+
+  /* 実例 */
+  .case { margin-top: 26px; border-top: 1px dashed var(--line); padding-top: 20px; }
+  .case-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .case-avatar { width: 34px; height: 34px; border-radius: 50%; background-repeat: no-repeat; flex-shrink: 0; }
+  .case .case-who { font-size: 13px; font-weight: 900; color: var(--ink); margin-bottom: 8px; }
+  .case-head .case-who { margin-bottom: 0; }
+  .case .case-who::before { content: "実例"; color: #fff; background: var(--navy); font-size: 11px; padding: 2px 10px; margin-right: 10px; letter-spacing: .1em; }
+  .case p { font-size: 15px; }
+
+  /* なぜ効くか */
+  .why { margin-top: 22px; font-size: 13.5px; color: var(--gray); line-height: 1.8; }
+  .ed-note { margin-top: 10px; font-size: 13.5px; color: var(--gray); line-height: 1.8; }
+  .why b { font-weight: 700; color: var(--gray); }
+
+  /* 執筆者 */
+  .author { background: #f8fafc; margin-top: clamp(64px, 11vw, 100px); padding: clamp(44px, 8vw, 64px) 0; }
+  .author h2 { font-size: 14px; letter-spacing: .12em; color: var(--gray); font-weight: 700; margin-bottom: 18px; }
+  .author .profile { display: flex; gap: 18px; align-items: flex-start; }
+  .author .ph-avatar { width: 80px; height: 80px; }
+  .author .name { font-size: 19px; font-weight: 900; }
+  .author .name small { font-size: 13px; font-weight: 500; color: var(--gray); margin-left: 10px; }
+  .author p { font-size: 15px; margin-top: 10px; }
+  .author .kanshu-line { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 14px; font-weight: 700; }
+  .author .closing { margin-top: 22px; font-size: 15px; }
+  .author .closing b { color: var(--navy); }
+  .author .closing a { color: var(--navy); font-weight: 700; }
+
+  footer { background: var(--navy-dark); color: #fff; padding: 26px 0; }
+  footer p { font-size: 12px; opacity: .7; text-align: center; }
+
+  /* デスクトップ */
+  @media (min-width: 1024px) {
+    .hero { padding: 150px 0 140px; }
+    .hero .label { font-size: 14px; }
+    br.sp-br { display: none; }
+
+    /* 例会写真は横長に */
+    .keikai-photo img { aspect-ratio: 3 / 1; object-position: center 38%; }
+
+    /* 全体図：前提は全幅、6STEPは2列 */
+    .toc ol { display: grid; grid-template-columns: 1fr 1fr; column-gap: 56px; }
+    .toc li:first-child { grid-column: 1 / -1; }
+
+    /* STEPセクション：左レール（番号・見出し）＋右コンテンツの2カラム */
+    section[id^="step"] .wrap { max-width: 960px; display: grid; grid-template-columns: 200px minmax(0, 1fr); column-gap: 56px; }
+    section[id^="step"] .step-head { grid-column: 1; grid-row: 1 / span 20; display: block; border-bottom: none; border-top: 2px solid var(--navy); padding-top: 16px; position: sticky; top: 48px; align-self: start; }
+    section[id^="step"] .step-no { display: block; font-size: 96px; }
+    section[id^="step"] .step-title { font-size: 22px; padding-bottom: 0; }
+    section[id^="step"] .wrap > *:not(.step-head) { grid-column: 2; }
+    section[id^="step"] .sub-label { justify-self: start; }
+    section[id^="step"] .principle { margin-top: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ヒーロー -->
+<div class="hero">
+  <div class="wrap">
+    <p class="label">守成クラブ千葉会場　会員獲得の6つの型</p>
+    <h1>会員獲得に<br><span class="em">センスはいらない</span></h1>
+    <p class="lead">会員獲得できる人は、感覚でやっています。その感覚には、ちゃんと理屈がある。それを、誰でも今日から使える<strong>「6つの型」</strong>に翻訳しました。</p>
+    <p class="lead">会場が<strong>200人</strong>になれば、あなたが例会1回で会える社長の数は、<strong>いまの2倍</strong>になる。これは会場のためである前に、<span class="hl">あなたの商売の話</span>です。</p>
+    <p class="credit">執筆・型化：今関貴文（株式会社ノビシロ）／監修：元吉（守成クラブ千葉会場 代表）・宮本（同 副代表）</p>
+  </div>
+</div>
+
+<!-- 例会風景写真 -->
+<div class="keikai-photo">
+  <img src="images/opt/reikai.jpg" alt="守成クラブ千葉会場の例会のようす">
+</div>
+
+<!-- 監修コメント -->
+<div class="kanshu">
+  <div class="wrap">
+    <div class="inner">
+      <div class="ph-avatar photo" style="background-image:url('images/opt/motoyoshi.jpg');background-size:auto 260%;background-position:50% 6%;" role="img" aria-label="元吉代表"></div>
+      <div class="body">
+        <p class="who">元吉代表より</p>
+        <p>この型は、合わない人に無理に勧めるためのものではありません。守成をいいなと思ってくれる仲間を、丁寧に増やすためのものです。</p>
+        <p class="draft-note">※文面は元吉さん確認のうえ確定（ドラフト）</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 目次＝全体図 -->
+<div class="toc">
+  <div class="wrap">
+    <h2>全体図</h2>
+    <p class="toc-hint">タップすると各STEPに飛べます。今日必要なところだけ読んでください。</p>
+    <ol>
+      <li><a href="#zentei"><span class="no">前提</span><span class="t"><b>自分が良いと思っていないものは、売れない</b><small>まず守成のどこが良いか、自分の言葉にする</small></span><span class="arw">→</span></a></li>
+      <li><a href="#step1"><span class="no">STEP1</span><span class="t"><b>種まき</b><small>売り込む前に、興味の種だけ蒔く</small></span><span class="arw">→</span></a></li>
+      <li><a href="#step2"><span class="no">STEP2</span><span class="t"><b>誘う</b><small>頼むのは見学だけ。日程はその場で押さえる</small></span><span class="arw">→</span></a></li>
+      <li><a href="#step3"><span class="no">STEP3</span><span class="t"><b>例会までの連絡</b><small>3回の連絡で、ドタキャンを防ぐ</small></span><span class="arw">→</span></a></li>
+      <li><a href="#step4"><span class="no">STEP4</span><span class="t"><b>例会当日</b><small>最初に誰と繋ぐかで、印象が決まる</small></span><span class="arw">→</span></a></li>
+      <li><a href="#step5"><span class="no">STEP5</span><span class="t"><b>入会の後押し</b><small>良かった点を、本人の口で言ってもらう</small></span><span class="arw">→</span></a></li>
+      <li><a href="#step6"><span class="no">STEP6</span><span class="t"><b>後日のフォロー</b><small>本音は翌日に出る。押さずに続ける</small></span><span class="arw">→</span></a></li>
+    </ol>
+  </div>
+</div>
+
+<!-- 大前提 -->
+<section class="block zentei" id="zentei">
+  <div class="wrap">
+    <span class="tag">大前提</span>
+    <h2>自分が良いと思っていないものは、<br class="sp-br">売れない</h2>
+    <p style="margin-top:18px;">売り手が良いと思っていない商品は、どんなトークでも売れません。声かけに迷う人の大半は、トークの問題ではなく「自分が守成の何を良いと思っているか」が言語化できていないだけです。</p>
+    <div class="do">30秒だけ、頭に浮かべてみてください。<br>あなたは、守成のどこが良いと思っていますか？</div>
+    <p>それがあなたの行動の源泉です。元吉さんも言い切ります。「勧誘トークの手前で、まず自分が"守成めっちゃいい"と思う体験をすることが最初」。代表自身が、トークより先に、守成に対する価値観を強調しています。</p>
+  </div>
+</section>
+
+<!-- 前半チャプター -->
+<div class="chapter">
+  <div class="wrap">
+    <p class="ch-label">前半 STEP 1-3</p>
+    <h2>ゲストを例会に連れてくる</h2>
+  </div>
+</div>
+
+<!-- STEP1 -->
+<section class="block" id="step1">
+  <div class="wrap">
+    <div class="step-head">
+      <span class="step-no">1</span>
+      <h2 class="step-title"><small>STEP 1</small>種まき</h2>
+    </div>
+    <p class="principle">売り込む前に、興味の「種」だけ蒔く。</p>
+
+    <p class="sub-label">基本トーク</p>
+    <div class="talk">
+      <p class="q">「最近、新規のお客さんとの接点ってどう作ってます？」<span class="note">（自分が話すより、相手に話させる）</span></p>
+      <p class="q">「経営者だけが毎月集まる会に入って、1回で100人ぐらいと名刺交換できるんですよ」</p>
+    </div>
+    <div class="hint"><b>誘う相手が思い浮かばない人へ</b>：お客様の中の個人事業主、仕入れ先・取引先の社長、同業の仲間。「経営者の知り合い」は、探すと意外といます。</div>
+
+    <div class="ng"><span class="ng-label">NG</span><p>初対面での勧誘。信頼関係ができる前の誘いは、いくら種まきしても芽は出ません。</p></div>
+
+    <div class="case">
+      <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/motoyoshi.jpg');background-size:auto 260%;background-position:50% 6%;"></span><p class="case-who">元吉さんの場合</p></div>
+      <p>さらに一歩引いて、相手から聞かせます。普段しない話（最近の学び、面白い人の話）をあえてして、「最近、何やってんの？」と相手に質問させてから「実はこういう会に入ってて」。誘われた側でなく聞いた側になった相手は、警戒せずに興味を持ちます。</p>
+    </div>
+    <div class="case">
+      <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/miyamoto.jpg');background-size:auto 290%;background-position:64% 9%;"></span><p class="case-who">宮本さんの場合</p></div>
+      <p>種をまく相手を選びます。相手の商売が分かっていて、守成の中の「この人と繋がれそう」が見えた人にだけ声をかける。誘い文句はシンプルです。「自分のやってることを、たくさんの人に知ってもらいたいんだったら、いい方法あるよ」。</p>
+    </div>
+
+    <p class="why"><b>なぜ効くか</b>：人は会う回数が増えるほど、相手に好意を持ちます。初回で誘うと「勧誘された」という警戒が立ち、以後の接触が全部マイナスに働く。種まきと誘いを分けるのが、遠回りに見えて最短です。</p>
+  </div>
+</section>
+
+<!-- STEP2 -->
+<section class="block" id="step2">
+  <div class="wrap">
+    <div class="step-head">
+      <span class="step-no">2</span>
+      <h2 class="step-title"><small>STEP 2</small>誘う</h2>
+    </div>
+    <p class="principle">頼むのは「入会」ではなく「見学」。日程は、その場で。</p>
+
+    <p class="sub-label">基本トーク</p>
+    <div class="talk">
+      <p class="q">「入会とかじゃなく、まず1回見に来てもらえたら。合わなかったらそれでいいので」</p>
+      <p class="q">「次の第3木曜の夜、空いてます？<span class="note">（スマホを出す）</span>仮でいいんで押さえちゃいましょう」</p>
+    </div>
+
+    <div class="ng"><span class="ng-label">NG</span><p>「都合いい時にまた声かけますね」。まず来ません。</p></div>
+
+    <div class="case">
+      <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/motoyoshi.jpg');background-size:auto 260%;background-position:50% 6%;"></span><p class="case-who">元吉さんの場合</p></div>
+      <p>誘いの言葉を相手の反応で変えます。「100人くらい来ますよ」にポジティブな反応の人には「毎月行けばどんどん積み上がりますよ」、ネガティブな反応の人には「名簿があるので、皆さん名簿を見て会話する人を決めてますよ」。台本の一本槍でなく、相手の温度を測ってから言葉を選ぶ。</p>
+    </div>
+    <div class="case">
+      <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/miyamoto.jpg');background-size:auto 290%;background-position:64% 9%;"></span><p class="case-who">宮本さんの場合</p></div>
+      <p>昔は「とりあえず来てみて」で誘って、打率は高くなかった。いまは事前の会話で乗ってこない人は誘わない。その結果、声をかけた人の8割方が入会します。誘う前に、相手の意欲を確かめる。質を上げるのはこの段階です。</p>
+    </div>
+
+    <p class="why"><b>なぜ効くか</b>：小さなお願いにYesと言った人は、次の大きなお願いにもYesと言いやすくなります（心理学の実験でも確認されている定番の原理です）。そして「今度ぜひ」は社交辞令として処理され、日付を決めない誘いは記憶から削除されます。</p>
+  </div>
+</section>
+
+<!-- STEP3 -->
+<section class="block" id="step3">
+  <div class="wrap">
+    <div class="step-head">
+      <span class="step-no">3</span>
+      <h2 class="step-title"><small>STEP 3</small>例会までの連絡</h2>
+    </div>
+    <p class="principle">申込から当日までの熱の低下を、接触の設計で防ぐ。ただし3回まで。</p>
+
+    <p class="sub-label">基本トーク（3回の型）</p>
+    <div class="talk">
+      <p class="scene">誘った当日</p>
+      <p>お礼＋「当日、僕の紹介ゲストとして会員の皆さんに紹介しますね。名刺100枚以上持ってきてくださいね」</p>
+      <p class="scene">3日前</p>
+      <p class="q">「会いたい業種の人がいたら繋ぐので、どんな人と会いたいか教えてもらえますか？あと、120秒で自社PRの時間があるので内容考えておいてくださいね」</p>
+      <p class="scene">当日朝</p>
+      <p class="q">「本日17時半に、会場入り口で待ち合わせしましょう。名刺忘れないように。良き出会いをサポートしますね」</p>
+    </div>
+
+    <div class="ng"><span class="ng-label">NG</span><p>誘って当日まで放置。かなりの確率でドタキャンになります。</p></div>
+
+    <div class="case">
+      <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/motoyoshi.jpg');background-size:auto 260%;background-position:50% 6%;"></span><p class="case-who">元吉さんの場合</p></div>
+      <p>連絡に必ず持ち物と人数を入れます（「100人来るから名刺は100枚以上ね」）。実務連絡の顔をした温度測定で、その反応から当日のフォローの仕方を調整する。連絡1本に2つの仕事をさせています。</p>
+    </div>
+    <div class="case">
+      <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/miyamoto.jpg');background-size:auto 290%;background-position:64% 9%;"></span><p class="case-who">宮本さんの場合</p></div>
+      <p>元吉さんと正反対で、あえて手をかけません。「明日何時ね、名刺持ってきてね」くらい。理由は明確で、「来ると決めたのは自分だ」と思ってもらうため。お膳立てしすぎると、相手の決意が育たない。</p>
+      <p class="ed-note">こまめ派（元吉さん）と任せる派（宮本さん）、どちらも正解です。ゲストのタイプと、あなたのスタイルで選んでください。</p>
+    </div>
+
+    <p class="why"><b>なぜ効くか</b>：人の熱意は誘われた瞬間が最高値で、当日に向けて必ず下がります。適度な接触は安心を保ちますが、やりすぎは逆効果。だから回数を決めておくのです。</p>
+  </div>
+</section>
+
+<!-- 後半チャプター -->
+<div class="chapter">
+  <div class="wrap">
+    <p class="ch-label">後半 STEP 4-6</p>
+    <h2>来てくれた人に、仲間になってもらう</h2>
+    <p>ここまでの3つで、ゲストは例会に来る確率が上がります。ここからは「来た人が入会したくなる」3つです。</p>
+  </div>
+</div>
+
+<!-- STEP4 -->
+<section class="block" id="step4">
+  <div class="wrap">
+    <div class="step-head">
+      <span class="step-no">4</span>
+      <h2 class="step-title"><small>STEP 4</small>例会当日</h2>
+    </div>
+    <p class="principle">ゲストの印象は、会の中身より「最初に話した1人」で決まる。</p>
+
+    <p class="sub-label">基本トーク</p>
+    <div class="talk">
+      <p class="scene">120秒PRの前</p>
+      <p class="q">「"○○業の社長を探してます"と具体的に言うのがコツです。隣でフォローします」</p>
+      <p class="scene">懇親会</p>
+      <p class="q">「名簿を見て気になった人いました？今すぐ繋ぎますよ」<span class="note">（先に与える）</span></p>
+    </div>
+
+    <div class="ng"><span class="ng-label">NG</span><p>ゲストを放置して自分の商談へ。孤立したゲストは二度と来ません。</p></div>
+
+    <div class="case">
+      <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/motoyoshi.jpg');background-size:auto 260%;background-position:50% 6%;"></span><p class="case-who">元吉さんの場合</p></div>
+      <p>繋ぐ相手を、ゲストのタイプで変えます。恥ずかしがり屋なら聞き上手な会員に、勢いのある人には勢いのある会員に。「最初に合わない人と会うと"この会は違うかも"と初手からずれる」から。誰に繋ぐかまで設計するのが、アテンドの本当の仕事です。</p>
+    </div>
+    <div class="case">
+      <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/miyamoto.jpg');background-size:auto 290%;background-position:64% 9%;"></span><p class="case-who">宮本さんの場合</p></div>
+      <p>例会の価値を、こう言い切ります。「一方通行でも、一度に何十人もの社長に自分の商売を話せる機会なんて、なかなかない」。120秒PRを前に緊張しているゲストには、この一言で意味づけしてあげてください。</p>
+    </div>
+
+    <p class="why"><b>なぜ効くか</b>：初参加者は情報量に圧倒されて、体験を自分で意味づけできません。最初の1人が「合う人」なら会全体が良く見える。紹介も「誰でも」では動かず、具体的な相手像で動きます。</p>
+  </div>
+</section>
+
+<!-- STEP5 -->
+<section class="block" id="step5">
+  <div class="wrap">
+    <div class="step-head">
+      <span class="step-no">5</span>
+      <h2 class="step-title"><small>STEP 5</small>入会の後押し</h2>
+    </div>
+    <p class="principle">こちらが説得しない。<br class="sp-br">良かった点を本人に言ってもらい、<br class="sp-br">その勢いで。</p>
+
+    <p class="sub-label">基本トーク</p>
+    <div class="talk">
+      <p class="q">「今日、どこが良かったですか？ 誰と話して印象良かったですか？」</p>
+      <p><span class="note">（相手が答えたら）</span>「ですよね。○○さんみたいなタイプ、この会ほんと合うんですよ」</p>
+      <p class="q">「今日繋がった人と深く付き合うためにも、次回から会員で来ませんか。手続きはサポートします」</p>
+    </div>
+
+    <div class="ng"><span class="ng-label">NG</span><p>「持ち帰ってご検討ください」。熱はその場が最高値です。押しすぎも禁物、1回押して引く。</p></div>
+
+    <div class="case">
+      <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/motoyoshi.jpg');background-size:auto 260%;background-position:50% 6%;"></span><p class="case-who">元吉さんの場合</p></div>
+      <p>入会の意思が見えた人には、入る前提で未来の話をします（「じゃあ来月からこうだね」）。決めきれない人には自分で押さず、同年代・境遇の似た会員に背中を押してもらう。少しでも意思のある人からは、「書いて入金するまでは入会になりません」と正直に伝えた上で、入会申込書を預かります。手元に申込書がある人は、戻ってきます。</p>
+    </div>
+    <div class="case">
+      <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/miyamoto.jpg');background-size:auto 290%;background-position:64% 9%;"></span><p class="case-who">宮本さんの場合</p></div>
+      <p>当日は、押しません。「お金もかかることだし、会場の雰囲気を見て、最後は自分で決めてもらえればいい」。</p>
+      <p class="ed-note">誘う段階（STEP2）で意欲を確かめているから、最後は委ねられる。前の工程の質が、後の工程の余裕を作ります。</p>
+    </div>
+
+    <p class="why"><b>なぜ効くか</b>：「どうでした？」は不満も引き出す質問ですが、「どこが良かったですか？」は良い点を思い出してもらう質問。人は自分の口で言ったことを大切にします。</p>
+  </div>
+</section>
+
+<!-- STEP6 -->
+<section class="block" id="step6">
+  <div class="wrap">
+    <div class="step-head">
+      <span class="step-no">6</span>
+      <h2 class="step-title"><small>STEP 6</small>後日のフォロー</h2>
+    </div>
+    <p class="principle">翌日に聞く。<br class="sp-br">その後は間隔を空けて、<br class="sp-br">押さずに続ける。</p>
+
+    <p class="sub-label">基本トーク</p>
+    <div class="talk">
+      <p class="scene">翌日</p>
+      <p class="q">「昨日はお疲れさまでした。1日経ってみて、どうですか？」</p>
+      <p class="scene">以後</p>
+      <p>1週間おきに軽く。<span style="white-space:nowrap;">「その後どうですか？」</span></p>
+      <p class="scene">断られたら</p>
+      <p class="q">「また別の機会に。周りに守成が合いそうな社長さんがいたら、<span style="white-space:nowrap;">教えてください」</span><span class="note">（関係は切らない）</span></p>
+    </div>
+
+    <div class="ng"><span class="ng-label">NG</span><p>連れてきたのに入らなかった、とがっかりして大半の人が連絡をやめる。定期的に連絡するだけで差がつきます。</p></div>
+
+    <div class="case">
+      <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/motoyoshi.jpg');background-size:auto 260%;background-position:50% 6%;"></span><p class="case-who">元吉さんの場合</p></div>
+      <p>例会の場は人が多く、ゲストは本音を言えません。だから翌日に聞く。千葉会場では当日入会しなかったゲストに翌日のフォローを入れていて、後日の入会は珍しくありません。</p>
+      <p class="ed-note">当日決まらない＝見送りではなく、翌日からが本番です。</p>
+    </div>
+    <div class="case">
+      <div class="case-head"><span class="case-avatar" style="background-image:url('images/opt/miyamoto.jpg');background-size:auto 290%;background-position:64% 9%;"></span><p class="case-who">宮本さんの場合</p></div>
+      <p>入会しなかった人には、必ず理由を聞きます。そして入会した人には、最初にこう伝えます。「入会はゴールじゃない。参加してなんぼ」。</p>
+      <p class="ed-note">理由を聞けば、次の誘い方が変わる。ここまでやると、会員獲得の型は磨き込まれ続けます。</p>
+    </div>
+
+    <p class="why"><b>なぜ効くか</b>：接触を続ければ関係は保てますが、催促に変わった瞬間、関係ごと失います。だから翌日と、あとは軽く。</p>
+  </div>
+</section>
+
+<!-- まとめ -->
+<div class="chapter">
+  <div class="wrap">
+    <p class="ch-label">最後に</p>
+    <h2>200人例会は、あなたの商売の話です</h2>
+  </div>
+</div>
+<section class="block zentei" id="matome" style="padding-top: clamp(40px, 7vw, 64px);">
+  <div class="wrap">
+    <p>会場が200人になれば、あなたが例会1回で会える社長も、あなたを紹介できる人も、いまの2倍になる。会員獲得は会場への奉仕ではなく、<strong>自分の商売圏を自分で広げる投資</strong>です。</p>
+    <div class="do">6つ全部、やらなくていいです。<br>まず「自分は守成のどこが良いか」を<span style="white-space:nowrap;">30秒、</span>言葉にする。<br>そして今週、1人に種をまく。<br>それだけで十分です。</div>
+    <p>あなたが今週まく1粒の種が、来月のあなたの商談になって返ってきます。一緒に、200人やりましょう。</p>
+  </div>
+</section>
+
+<!-- 執筆者 -->
+<div class="author">
+  <div class="wrap">
+    <h2>執筆者について</h2>
+    <div class="profile">
+      <div class="ph-avatar photo" style="background-image:url('images/opt/imazeki.jpg');background-size:auto 215%;background-position:57% 4%;" role="img" aria-label="今関 貴文"></div>
+      <div>
+        <p class="name">今関 貴文<small>株式会社ノビシロ</small></p>
+        <p>企業の営業組織づくりが本業です。社長やエースが感覚でやっている勝ちパターンを言語化し、型にして、「全員が売れる」組織を作る。この資料は、ノビシロのメソッドの一部を千葉会場の会員獲得に応用したものです。</p>
+      </div>
+    </div>
+    <p class="kanshu-line">監修：元吉（守成クラブ千葉会場 代表）／宮本（同 副代表）</p>
+    <p class="closing">この型が、あなたの次のゲストにつながったら何よりです。使ってみた感想は、例会でぜひ聞かせてください。それが次の型の材料になります。ノビシロの仕事の詳細は<a href="https://nobishiro-group.com/?utm_source=shusei-lp&amp;utm_medium=referral">ホームページ</a>に。</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap"><p>守成クラブ千葉会場 会員向け資料　執筆・型化：今関貴文（株式会社ノビシロ）</p></div>
+</footer>
+
+</body>
+</html>
